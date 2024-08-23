@@ -44,7 +44,7 @@ The default model is well-suited for UMI count data. You can also test other typ
 
 
 ## Training model
-We release training codes and simulator codes in [`./train`](https://github.com/snu-mllab/Neural-Relation-Graph/blob/main/train). Due to storage limitations, we are currently not distributing the training data for our model. (You can generate the data by running our simulation codes.) Please use the training code for reference only.
+We release training codes and simulator codes in [`./train`](https://github.com/snu-mllab/Targeted-Cause-Discovery/tree/main/train). Due to storage limitations, we are currently not distributing the training data for our model. (You can generate the data by running our simulation codes.) Please use the training code for reference only.
 
 
 ## Citation

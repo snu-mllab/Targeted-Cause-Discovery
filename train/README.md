@@ -2,7 +2,7 @@
 
 This is the repository for training codes of TCD-DL. Due to storage limitations, we are currently not distributing the training data for our model. Please use the training code for reference only.
 
-To obtain the simulation data, please refer to [`./simulator`](https://github.com/snu-mllab/Neural-Relation-Graph/blob/main/train/simulator).
+To obtain the simulation data, please refer to [`./simulator`](https://github.com/snu-mllab/Targeted-Cause-Discovery/blob/main/train/simulator).
 
 We train our model on a single RTX3090 by running 
 ```
@@ -28,5 +28,5 @@ python -B src/train.py --cause --no_tqdm --not_save_last \
       ㄴ [data_level].npy (observation)
       ㄴ [data_level]_intv.npy (intervention matrix)
     ```
-- Data_level represents the simulation fidelity. Please check [`./simulator`](https://github.com/snu-mllab/Neural-Relation-Graph/blob/main/train/simulator).
+- Data_level represents the simulation fidelity. Please check [`./simulator`](https://github.com/snu-mllab/Targeted-Cause-Discovery/blob/main/train/simulator).
 - For discrete and impute models, we utilize the mixture of data sources across multiple [data_level]. Please check `./slurm_train.py` L9.
