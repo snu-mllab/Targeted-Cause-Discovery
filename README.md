@@ -28,6 +28,7 @@ Obtain the predicted cause scores on the Perturb-seq dataset by running
 python -B run.py --data_file human
 ```
 - You can select target variable by `--target_idx [int]`. The gene list is provided in the jupyter notebook above.
+- Results will be saved at `SAVEPATH` in `args.py`
 
 
 ## Inference on custom data
@@ -39,4 +40,8 @@ python -B run.py --data_file human
 
 The default model is well-suited for UMI count data. You can also test other types of trained models, including those trained on imputed data or continuous data: 
 1. Download the model checkpoints from the [Google Drive](https://drive.google.com/drive/folders/1ceCsC3w8HR-2Bl3dNWh7RsEm8L9dGixH?usp=share_link) and locate the folders at `./ckpt`. 
-2. Run the `run.py`. Set `--model_type continuous`
+2. Run the `run.py`. Set `--model_type continuous` to use model trained on continuous data, and set `--model_type impute` to use model trained on imputed data.
+
+## Citation
+```
+```

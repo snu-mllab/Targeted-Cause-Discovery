@@ -23,8 +23,8 @@ class CauseDiscovery(pl.LightningModule):
 
         # Transformer on sequence of predicted graphs
         self.encoder = AxialTransformer(args)
-
         self.top_layer = TopLayer_Perm(args)
+
         self.loss_fn = nn.BCEWithLogitsLoss()
         self.auroc = BinaryAUROC()
         self.ap = BinaryAveragePrecision()

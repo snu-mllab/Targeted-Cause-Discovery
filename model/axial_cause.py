@@ -6,7 +6,7 @@ import torch.nn as nn
 
 
 class AxialTransformer(nn.Module):
-    """ 2D row/col attention over features (N, N) 
+    """ 2D row/col attention over features (n, m, d) 
     """
 
     def __init__(self, args):

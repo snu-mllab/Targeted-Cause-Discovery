@@ -2,7 +2,7 @@ import os
 import argparse
 
 DATAPATH = "/storage/janghyun/datasets/causal"
-SAVEPATH = "/storage/janghyun/results/causal"
+SAVEPATH = "/storage/janghyun/results/causal/inference"
 
 
 def get_parser():
@@ -60,7 +60,11 @@ def get_parser():
     parser.add_argument("--dropout", type=float, default=0.)
 
     # ======== misc =======
-    parser.add_argument("--save_pred", action="store_true", help="Save predictions on test set")
+    parser.add_argument("--save_pred",
+                        type=str2bool,
+                        default=True,
+                        help="Save predictions on test set")
+    parser.add_argument("--print_freq", type=int, default=20, help="time stamp period")
     parser.add_argument("--seed", type=int, default=0, help="random seed")
     parser.add_argument("--tag", type=str, default="", help="tag for saving results")
 
@@ -73,9 +77,10 @@ def parse_args():
         args.data_file = os.path.join(DATAPATH, args.data_file)
     else:
         args.model_type = "discrete"
-        args.en_vars = 1  # setting used in our paper. need to test higher values.
+        args.en_vars = 1  # setting used in our paper.
 
     args.data_path = DATAPATH
+    args.save_path = SAVEPATH
 
     if args.model_type == "continuous":
         args.shift = 12

@@ -24,8 +24,6 @@ def main(args):
     targets = set_targets(args, graph)
     pred = infer(args, model, inputs, targets)
 
-    print(pred)
-
     # Evaluate
     results = defaultdict(list)
     if graph is not None:
@@ -49,9 +47,9 @@ def main(args):
         os.makedirs(path, exist_ok=True)
         if graph is not None:
             torch.save(results, f"{path}/results{file_tag}.pt")
-            torch.save(graph, f"{path}/true{file_tag}.pt")
-        torch.save(pred, f"{path}/pred{file_tag}.pt")
-        print(f"Save results at {path}/pred{file_tag}.pt")
+            np.save(f"{path}/true{file_tag}.npy", graph.cpu().numpy())
+        np.save(f"{path}/pred{file_tag}.npy", pred.cpu().numpy())
+        print(f"Save results at {path}/pred{file_tag}.npy")
 
 
 def set_targets(args, graph):
@@ -68,22 +66,20 @@ def set_targets(args, graph):
 
     if targets is not None:
         targets = targets.tolist()
-        print(f"# Target nodes: {len(targets)}", flush=True)
+        print(f"\n#Target nodes: {len(targets)}", flush=True)
 
     return targets
 
 
 def tagging(args):
-    path = f"/storage/janghyun/results/causal/inference/"
-    name = args.data_file.split('/')[-1][:-4]
-    path += f"{name}_{args.data_level}{args.tag}"
+    name = args.data_file.split('/')[-1]
+    path = os.path.join(args.save_path, f"{name}_{args.data_level}{args.tag}")
 
     file_tag = f"_var{args.num_vars}_enobs{args.en_obs}_envar{args.en_vars}"
     if args.anchor_size != 20:
         file_tag += f"_anchor{args.anchor_size}"
     if args.target_idx is not None:
         file_tag += f"_n{args.range}_{args.target_idx}"
-    file_tag += f"_{args.env_idx}"
 
     print(f"Save path: {path}")
     return path, file_tag

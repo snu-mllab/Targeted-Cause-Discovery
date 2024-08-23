@@ -82,7 +82,7 @@ def infer(args, model, inputs, targets=None):
         targets = np.arange(n_node)
 
     for i, target_node in enumerate(targets):
-        if i % 100 == 0:
+        if i % args.print_freq == 0:
             print(f"{target_node} {datetime.now().strftime('%H:%M')}", flush=True)
 
         if target_node >= n_node:

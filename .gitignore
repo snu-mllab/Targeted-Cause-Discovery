@@ -1,5 +1,6 @@
 wandb
 slurm
+slurm.py
 **/__pycache__/
 **/.ipynb_checkpoints/
 *.ckpt
