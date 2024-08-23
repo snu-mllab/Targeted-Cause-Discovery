@@ -20,8 +20,8 @@ python -B src/train.py --cause --no_tqdm --not_save_last \
 - Each data folder has the following structure 
     ```
     ecoli
-    ㄴ 0
-    ㄴ 0
+    ㄴ 0 (environment index)
+    ㄴ 1
     ...
     ㄴ 49
       ㄴ DAG.npy (causal graph)
