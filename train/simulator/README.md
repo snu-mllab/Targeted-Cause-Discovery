@@ -21,4 +21,4 @@ The resulting files contain
 (3) discretized UMI count expression data `data.npy`  (i.e., low fidelity).
 5. corresponding intervention matrices `*_intv.npy`.
 
-To obtain the medium fidelity data, please check `slurm_poisson.py`, which executes `poisson.py`. You need to change the base_path in poisson.py to [output path] in the command above.
+To obtain the medium fidelity data, please check `slurm_poisson.py`, which executes `poisson.py`. You need to change the `base_path` in `poisson.py` to [output path] (`--path_data`) in the command above.
