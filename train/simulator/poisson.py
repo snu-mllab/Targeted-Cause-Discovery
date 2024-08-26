@@ -27,7 +27,7 @@ for i in range(args.size):
         data_orig = np.load(os.path.join(file_path, file))
 
         data_full = []
-        for _ in range(20):
+        for _ in range(5):
             data_sample = [np.random.poisson(data_orig) for _ in range(args.n_sample)]
             data_sample = np.stack(data_sample, axis=0).astype(np.float32)
             data_sample = np.sum(data_sample, axis=0) / args.n_sample

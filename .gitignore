@@ -5,6 +5,7 @@ slurm.py
 **/.ipynb_checkpoints/
 *.ckpt
 !ckpt/discrete/model_best_step18800_epoch93_0.159.ckpt
+!train/simulator/slurm.py
 
 *.pyc
 */SERGIO

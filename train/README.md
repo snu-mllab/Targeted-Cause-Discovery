@@ -1,4 +1,4 @@
-## Trining codes for TCD-DL
+## Training codes for TCD-DL
 
 This is the repository for training codes of TCD-DL. Due to storage limitations, we are currently not distributing the training data for our model. Please use the training code for reference only.
 
