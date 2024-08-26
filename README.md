@@ -43,7 +43,7 @@ The default model is well-suited for UMI count data. You can also test other typ
 2. Run the `run.py`. Set `--model_type continuous` to use model trained on continuous data, and set `--model_type impute` to use model trained on imputed data.
 
 
-## Training model
+## Training a model
 We release training codes and simulator codes in [`./train`](https://github.com/snu-mllab/Targeted-Cause-Discovery/tree/main/train). Due to storage limitations, we are currently not distributing the training data for our model. (You can generate the data by running our simulation codes.) Please use the training code for reference only.
 
 

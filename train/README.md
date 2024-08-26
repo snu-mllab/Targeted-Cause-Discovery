@@ -16,10 +16,10 @@ python -B src/train.py --cause --no_tqdm --not_save_last \
 --n_env 50 --epoch 200 \
 --batch_size 16 --accumulate_batches 2 --lr 8e-4
 ```
-- Set `DATAPATH` in `src/args.py` to point the directory containing the [list of data folders] above (reference: args.py L136). 
+- Set `DATAPATH` in [`src/args.py`](https://github.com/snu-mllab/Targeted-Cause-Discovery/blob/main/train/src/args.py) to point the directory containing the [list of data folders] above (reference: src/args.py L136). 
 - Each data folder has the following structure 
     ```
-    ecoli
+    ecoli (data folder example)
     ㄴ 0 (environment index)
     ㄴ 1
     ...
@@ -29,4 +29,4 @@ python -B src/train.py --cause --no_tqdm --not_save_last \
       ㄴ [data_level]_intv.npy (intervention matrix)
     ```
 - Data_level represents the simulation fidelity. Please check [`./simulator`](https://github.com/snu-mllab/Targeted-Cause-Discovery/blob/main/train/simulator).
-- For discrete and impute models, we utilize the mixture of data sources across multiple [data_level]. Please check `./slurm_train.py` L9.
+- For discrete and impute models, we utilize the mixture of data sources across multiple [data_level]. Please check [`./slurm_train.py`](https://github.com/snu-mllab/Targeted-Cause-Discovery/blob/main/train/slurm_train.py) L9.
