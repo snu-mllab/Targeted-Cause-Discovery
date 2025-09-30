@@ -1,5 +1,5 @@
 # Targeted-Cause-Discovery
-Official Python implementation for "[Targeted Cause Discovery with Data-Driven Learning](https://arxiv.org/abs/2408.16218)". This repository provides inference codes for TCD-DL model.
+Official Python implementation for "[Large-Scale Targeted Cause Discovery via Learning from Simulated Data](https://arxiv.org/abs/2408.16218)". This repository provides inference codes for TCD-DL model.
 
 <img src="./image/main.png" width="400">
 
@@ -49,10 +49,10 @@ We release training codes and simulator codes in [`./train`](https://github.com/
 
 ## Citation
 ```
-@article{kim2024targeted,
-    title={Targeted Cause Discovery with Data-Driven Learning},
+@article{kim2025targeted,
+    title={Large-Scale Targeted Cause Discovery via Learning from Simulated Data},
     author={Kim, Jang-Hyun and Gibbs, Claudia Skok and Yun, Sangdoo and Song, Hyun Oh and Cho, Kyunghyun},
-    journal={arXiv preprint arXiv:2408.16218},
-    year={2024}
+    journal={Transactions on Machine Learning Research},
+    year={2025}
 }
 ```
